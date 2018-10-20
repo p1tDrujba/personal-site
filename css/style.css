@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html {font-size:100%;}
+h1 {font-size:2rem;line-height:2rem;font-family:'Lobster regular', sans-serif;}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.header {
+    background: url(../images/header-background.jpg);
+    padding-top: 2%;
+    min-height: 700px;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
+.navigation_list {
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 2em;
+}
+
+.navigation_link {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    line-height: 41px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    margin-right: 10px;
+    margin-left: 10px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.navigation_link:active {
+    opacity: 0.5;
+}
+
+.navigation_link:hover {
+    color: #fed136;
+}
+
+.acquaintance {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 257px;
+    width: 62%;
+    margin-left: 5%;
+}
+
+.acquaintance_greeting {
+    font-family: "Droid Serif", sans-serif;
+    font-size: 40px;
+    color: #red;
+    margin-bottom: 34px;
+}
+
+.acquaintance_surname {
+    font-family: "Droid Serif", sans-serif;
+    font-size: 75px;
+    color: #red;
+    margin: 0;
+    margin-bottom: 34px;
+}
+
+.acquaintance_hire-button {
+    display: block;
+    background-color: #fed136;
+    height: 65px;
+    width: 240px;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-weight: bold;
+}
+
+.acquaintance_hire-button:before {
+    content: "";
+    display: inline-block;
+    min-height: inherit;
+    height: 100%;
+    vertical-align: middle;
+}
