@@ -1,88 +1,122 @@
-* {
+body {
     margin: 0;
     padding: 0;
 }
-html {font-size:100%;}
-h1 {font-size:2rem;line-height:2rem;font-family:'Lobster regular', sans-serif;}
+
+html {
+    font-size: 14px;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+a {
+    font-size: 1rem;
+}
+
+p {
+    font-size: 1rem;
+}
 
 .container {
     max-width: 1400px;
+    width: 100%;
     margin: 0 auto;
 }
 
 .header {
-    background: url(../images/header-background.jpg);
-    padding-top: 2%;
-    min-height: 700px;
-    background-size: contain;
+    background-image: url(../images/header-background.jpg);
+    background-size: cover;
     background-repeat: no-repeat;
-
+    padding-top: 2%;
+    padding-bottom: 5%;
+    background-position: center;
 }
 
 .navigation_list {
-    text-decoration: none;
-    list-style: none;
     display: flex;
+    list-style: none;
+    padding: 0;
+    line-height: 41px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
     justify-content: flex-end;
-    margin-right: 2em;
+    margin: 0 10%;
+
 }
 
 .navigation_link {
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    line-height: 41px;
-    font-weight: bold;
-    font-family: 'Montserrat', sans-serif;
-    margin-right: 10px;
-    margin-left: 10px;
+    margin-right: 36px;
     text-decoration: none;
-    color: #ffffff;
-}
-
-.navigation_link:active {
-    opacity: 0.5;
+    color: white;
 }
 
 .navigation_link:hover {
     color: #fed136;
 }
 
+.navigation_link:active {
+    opacity: 0.5;
+}
+
 .acquaintance {
+    margin-top: 22%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 257px;
-    width: 62%;
-    margin-left: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .acquaintance_greeting {
-    font-family: "Droid Serif", sans-serif;
-    font-size: 40px;
-    color: #red;
-    margin-bottom: 34px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-style: italic;
+    letter-spacing: -1px;
+    margin: 0;
 }
 
 .acquaintance_surname {
-    font-family: "Droid Serif", sans-serif;
-    font-size: 75px;
-    color: #red;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    letter-spacing: -1px;
     margin: 0;
-    margin-bottom: 34px;
 }
 
 .acquaintance_hire-button {
-    display: block;
-    background-color: #fed136;
-    height: 65px;
+    display: inline-block;
     width: 240px;
+    height: 65px;
+    background-color: #fed136;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
     text-align: center;
-    box-sizing: border-box;
-    font-size: 18px;
-    text-transform: uppercase;
+    margin-top: 25px;
+    font-size: 14px;
     font-family: 'Montserrat', sans-serif;
-    color: white;
     font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+}
+
+.acquaintance_hire-button:hover {
+    border: 2px solid white;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.acquaintance_hire-button:active {
+    opacity: 0.5;
 }
 
 .acquaintance_hire-button:before {
@@ -91,4 +125,119 @@ h1 {font-size:2rem;line-height:2rem;font-family:'Lobster regular', sans-serif;}
     min-height: inherit;
     height: 100%;
     vertical-align: middle;
+}
+
+.about {
+    margin-top: 65px;
+}
+
+.about-title {
+    text-align: center;
+}
+
+.about_header {
+    font-family: "Microsoft Sans Serif";
+    text-transform: uppercase;
+    font-size: 2.858rem;
+    font-weight: 400;
+    letter-spacing: -0.071rem;
+    margin: 0;
+}
+
+.about_header-text {
+    font-family: 'Myriad Pro';
+    color:  #777777;
+    font-size: 1.286rem;
+    font-style: italic;
+    text-align: center;
+    margin: 8px 0 0;
+}
+
+.about-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-content {
+    margin-top: 84px;
+    display: grid;
+    grid-row-gap: 100px;
+    grid-template-columns: 14.28% 14.28% 14.28%;
+    grid-template-rows: 200px 200px 200px;
+    width: 100%;
+
+}
+
+.last-place_text {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    font-family: 'Myriad Pro';
+    color:  #777777;
+    font-weight: 400;
+    letter-spacing: -0.025rem;
+    text-align: right;
+    margin-right: 5px;
+}
+
+.last-place_img {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.skills_text {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    margin-left: 5px;
+}
+
+.skills_img {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.technologies-list_text {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+}
+
+.technologies-list_img {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+
+
+
+@media screen and (max-width: 768px) and (min-width: 461px) {
+    html {
+        font-size: 10px;
+    }
+
+    .navigation_list {
+        margin: 0 2%;
+        justify-content: center;
+    }
+
+    .acquaintance_hire-button {
+        width: 200px;
+        height: 54px;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .navigation_list {
+        margin: 0 2%;
+        justify-content: center;
+    }
+
+    .navigation_link {
+        margin-right: 15px;
+        font-size: 10px;
+    }
+
+    .acquaintance_hire-button {
+        width: 150px;
+        height: 40px;
+        font-size: 12px;
+    }
 }
