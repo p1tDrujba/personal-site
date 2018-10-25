@@ -24,6 +24,10 @@ p {
     font-size: 1rem;
 }
 
+i {
+    font-size: 2rem;
+}
+
 .container {
     max-width: 1400px;
     width: 100%;
@@ -67,7 +71,7 @@ p {
 }
 
 .acquaintance {
-    margin-top: 22%;
+    margin-top: 19%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -90,7 +94,7 @@ p {
     margin: 0;
 }
 
-.acquaintance_hire-button {
+.button {
     display: inline-block;
     width: 240px;
     height: 65px;
@@ -105,9 +109,13 @@ p {
     font-weight: bold;
     color: white;
     text-transform: uppercase;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
-.acquaintance_hire-button:hover {
+.button:hover {
     border: 2px solid white;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -115,11 +123,11 @@ p {
     cursor: pointer;
 }
 
-.acquaintance_hire-button:active {
+.button:active {
     opacity: 0.5;
 }
 
-.acquaintance_hire-button:before {
+.button:before {
     content: "";
     display: inline-block;
     min-height: inherit;
@@ -136,7 +144,7 @@ p {
 }
 
 .about_header {
-    font-family: "Microsoft Sans Serif";
+    font-family: 'Myriad Pro', serif;
     text-transform: uppercase;
     font-size: 2.858rem;
     font-weight: 400;
@@ -145,8 +153,8 @@ p {
 }
 
 .about_header-text {
-    font-family: 'Myriad Pro';
-    color:  #777777;
+    font-family: 'Myriad Pro', serif;
+    color: #777777;
     font-size: 1.286rem;
     font-style: italic;
     text-align: center;
@@ -155,7 +163,7 @@ p {
 
 .about-center {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
 }
 
@@ -163,37 +171,84 @@ p {
     margin-top: 84px;
     display: grid;
     grid-row-gap: 100px;
-    grid-template-columns: 14.28% 14.28% 14.28%;
-    grid-template-rows: 200px 200px 200px;
-    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 
 }
 
 .last-place_text {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
-    font-family: 'Myriad Pro';
-    color:  #777777;
+
+}
+
+.last-place_text h3 {
+    font-family: 'Myriad Pro', serif;
+    color: #222222;
+    font-size: 1.286rem;
+    font-weight: 400;
+    letter-spacing: -0.032rem;
+    text-align: right;
+    margin: 0;
+}
+
+.last-place_text ul {
+    padding: 0;
+}
+
+.last-place_text li {
+    font-family: 'Myriad Pro', serif;
+    color: #777777;
     font-weight: 400;
     letter-spacing: -0.025rem;
     text-align: right;
-    margin-right: 5px;
+    margin-right: 10px;
+}
+
+.last-place_text li:nth-child(n+2) {
+    margin-top: 8px;
 }
 
 .last-place_img {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
+    width: 100%;
+    object-fit: cover;
 }
 
 .skills_text {
     grid-column: 3 / 4;
     grid-row: 2 / 3;
-    margin-left: 5px;
+}
+
+.skills_text h3 {
+    font-family: 'Myriad Pro', serif;
+    color: #222222;
+    font-size: 1.286rem;
+    font-weight: 400;
+    letter-spacing: -0.032rem;
+    margin: 0;
+    text-align: left;
+}
+
+.skills_text li {
+    font-family: 'Myriad Pro', serif;
+    color: #777777;
+    font-weight: 400;
+    letter-spacing: -0.025rem;
+    margin-left: 10px;
+    text-align: left;
+}
+
+.skills_text ul {
+    padding: 0;
+    list-style-position: inside;
 }
 
 .skills_img {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
+    width: 100%;
+    object-fit: cover;
 }
 
 .technologies-list_text {
@@ -201,12 +256,80 @@ p {
     grid-row: 3 / 4;
 }
 
+.technologies-list_text h3 {
+    font-family: 'Myriad Pro', serif;
+    color: #222222;
+    font-size: 1.286rem;
+    font-weight: 400;
+    letter-spacing: -0.032rem;
+    margin: 0;
+    text-align: right;
+}
+
+.technologies-list_text li {
+    font-family: 'Myriad Pro', serif;
+    color: #777777;
+    font-weight: 400;
+    letter-spacing: -0.025rem;
+    margin-right: 10px;
+    text-align: right;
+}
+
 .technologies-list_img {
     grid-column: 2 / 3;
     grid-row: 3 / 4;
+    width: 100%;
+    object-fit: cover;
 }
 
+.about_cv {
+    margin-top: 100px;
+}
 
+.portfolio {
+    display: flex;
+    justify-content: center;
+}
+
+.portfolio_gallery {
+    width: 50%;
+}
+
+.portfolio_gallery img {
+    width: 100%;
+}
+
+.portfolio_ArrowBox {
+    width: 5%;
+    text-align: center;
+}
+
+.portfolio_ArrowBox:hover {
+    cursor: pointer;
+}
+
+.portfolio_ArrowBox:hover .fas {
+    font-size: 2.25rem;
+}
+
+.portfolio_ArrowBox:active .fas {
+    font-size: 1.75rem;
+}
+
+.portfolio_ArrowBox::before {
+    content: "";
+    display: inline-block;
+    min-height: inherit;
+    height: 100%;
+    vertical-align: middle;
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 10px;
+    }
+
+}
 
 @media screen and (max-width: 768px) and (min-width: 461px) {
     html {
@@ -218,13 +341,101 @@ p {
         justify-content: center;
     }
 
-    .acquaintance_hire-button {
+    .button {
         width: 200px;
         height: 54px;
+    }
+
+    .about_cv {
+        font-size: 10px;
+        margin-top: 50px;
     }
 }
 
 @media screen and (max-width: 460px) {
+    html {
+        font-size: 12px;
+    }
+
+    .acquaintance {
+        text-align: center;
+    }
+
+    .about-content {
+        grid-row-gap: 25px;
+        grid-template-columns: 1fr;
+        margin-top: 40px;
+    }
+
+    .last-place_img {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        width: 158px;
+        height: 158px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .last-place_text {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+
+    .last-place_text h3 {
+        text-align: center;
+    }
+
+    .last-place_text li {
+        list-style: none;
+        text-align: center;
+        margin: 0;
+    }
+
+    .skills_img {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+        width: 158px;
+        height: 158px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .skills_text {
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+    }
+
+    .skills_text h3 {
+        text-align: center;
+    }
+
+    .skills_text li {
+        margin: 0;
+    }
+
+    .technologies-list_img {
+        grid-column: 1 / 2;
+        grid-row: 5 / 6;
+        width: 158px;
+        height: 158px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .technologies-list_text {
+        grid-column: 1 / 2;
+        grid-row: 6 / 7;
+    }
+
+    .technologies-list_text h3 {
+        text-align: center;
+    }
+
+    .technologies-list_text li {
+        margin: 0;
+        text-align: left;
+    }
+
     .navigation_list {
         margin: 0 2%;
         justify-content: center;
@@ -235,9 +446,14 @@ p {
         font-size: 10px;
     }
 
-    .acquaintance_hire-button {
+    .button {
         width: 150px;
         height: 40px;
         font-size: 12px;
+    }
+
+    .about_cv {
+        font-size: 8px;
+        margin-top: 30px;
     }
 }

@@ -6,6 +6,8 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+          integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <title>Борщев Петр</title>
 </head>
 <body>
@@ -21,8 +23,8 @@
         </nav>
         <div class="acquaintance">
             <h2 class="acquaintance_greeting">Здравствуйте!</h2>
-            <h1 class="acquaintance_surname">Моя фамилия Борщев</h1>
-            <a class="acquaintance_hire-button">нанять меня</a>
+            <h1 class="acquaintance_surname">Я Петр Борщев</h1>
+            <a class="button acquaintance_hire-button">нанять меня</a>
         </div>
     </header>
     <main class="main">
@@ -35,31 +37,56 @@
             <div class="about-center">
                 <div class="about-content">
                     <div class="last-place_text">
-                        <p>3 последних места работы:</p>
-                        <p>май 2016 - август 2017. МБУ МФЦ ММР ( старший эксперт )</p>
-                        <p>август 2016 - настоящее время. ООО "ОКЕЙ-ТЕЛЕКОМ" ( инженер-техник )</p>
-                        <p>август 2017 - настоящее время. ООО "ОКЕЙ-ТЕЛЕКОМ" ( инженер технической поддержки )</p>
+                        <h3>3 последних места работы:</h3>
+                        <ul>
+                            <li>МБУ МФЦ ММР <br>старший эксперт</li>
+                            <li>ООО "ОКЕЙ-ТЕЛЕКОМ" <br> инженер-техник</li>
+                            <li>ООО "ОКЕЙ-ТЕЛЕКОМ" <br> инженер технической поддержки</li>
+                        </ul>
+                        <!--<p>май 2016 - август 2017. МБУ МФЦ ММР ( старший эксперт )</p>-->
+                        <!--<p>август 2016 - настоящее время. ООО "ОКЕЙ-ТЕЛЕКОМ" ( инженер-техник )</p>-->
+                        <!--<p>август 2017 - настоящее время. ООО "ОКЕЙ-ТЕЛЕКОМ" ( инженер технической поддержки )</p>-->
                     </div>
                     <img class="last-place_img" src="images/circle1.png">
 
                     <div class="skills_text">
-                        <p>Профессиональные навыки:</p>
-                        <p>Усидчивость</p>
-                        <p>Обучаемость</p>
-                        <p>Клиентоориентированность</p>
+                        <h3>Профессиональные навыки:</h3>
+                        <ul>
+                            <li>Усидчивость</li>
+                            <li>Обучаемость</li>
+                            <li>Клиентоориентированность</li>
+                        </ul>
                     </div>
-                    <img class="skills_img" alt="Профессиональные качества" src="images/circle2.png">
+                    <img class="skills_img" src="images/circle2.png">
 
                     <div class="technologies-list_text">
-                        <p>Стек технологий:</p>
-                        <p>HTML 5</p>
-                        <p>CSS3</p>
-                        <p>LESS</p>
-                        <p>ES5</p>
+                        <h3>Стек технологий:</h3>
+                        <ul>
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>LESS</li>
+                            <li>ES5</li>
+                        </ul>
                     </div>
-                    <img class="technologies-list_img" alt="Стек технологий" src="images/circle3.png">
+                    <img class="technologies-list_img" src="images/circle3.png">
                 </div>
+                <a class="button about_cv">Скачать полное резюме</a>
             </div>
+
+
+        </div>
+
+        <div class="portfolio">
+            <div class="portfolio_ArrowBox">
+                <i id="portfolio-leftArrow" class="fas fa-angle-left"></i>
+            </div>
+            <div class="portfolio_gallery">
+                <img id="portfolio-image" src="images/site1.jpg" alt="сайт из портфолио">
+            </div>
+            <div class="portfolio_ArrowBox">
+                <i id="portfolio-rightArrow" class="fas fa-angle-right"></i>
+            </div>
+
 
         </div>
     </main>
