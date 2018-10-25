@@ -287,12 +287,35 @@ i {
 }
 
 .portfolio {
+    margin-top: 100px;
+}
+
+.portfolio_flex {
     display: flex;
     justify-content: center;
 }
 
+.portfolio_header {
+    font-family: 'Myriad Pro', serif;
+    text-transform: uppercase;
+    font-size: 2.858rem;
+    font-weight: 400;
+    letter-spacing: -0.071rem;
+    margin: 0;
+    text-align: center;
+}
+
+.portfolio_header-text {
+    font-family: 'Myriad Pro', serif;
+    color: #777777;
+    font-size: 1.286rem;
+    font-style: italic;
+    text-align: center;
+    margin: 8px 0 0;
+}
+
 .portfolio_gallery {
-    width: 50%;
+    width: 80%;
 }
 
 .portfolio_gallery img {
