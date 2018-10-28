@@ -1,4 +1,4 @@
-body {
+* {
     margin: 0;
     padding: 0;
 }
@@ -316,6 +316,117 @@ i {
 
 .portfolio_gallery {
     width: 80%;
+    position: relative;
+    overflow: hidden;
+    perspective: 1000px
+}
+
+.portfolio_gallery_spanTop {
+    position: absolute;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.71);
+    border: 1px solid black;
+    width: 99.9%;
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    -ms-transform: rotateX(90deg);
+    -o-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+    transform-origin: top center;
+    opacity: 0;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+.portfolio_gallery_spanBottom {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.71);
+    border: 1px solid black;
+    width: 99.9%;
+    -webkit-transform: rotateX(-90deg);
+    -moz-transform: rotateX(-90deg);
+    -ms-transform: rotateX(-90deg);
+    -o-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+    transform-origin: bottom center;
+    opacity: 0;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    height: 5%;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.spanBottom-item {
+    width: 50%;
+}
+
+.portfolio_gallery:hover .portfolio_gallery_spanTop,
+.portfolio_gallery:hover .portfolio_gallery_spanBottom {
+    opacity: 1;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+
+.portfolio_gallery_spanTop-header {
+    font-family: 'Myriad Pro', serif;
+    font-weight: 400;
+    letter-spacing: -0.071rem;
+    font-size: 1.8rem;
+    margin: 0;
+    color: white;
+}
+
+.portfolio_gallery_spanTop-text {
+    font-family: 'Myriad Pro', serif;
+    color: #77756b;
+    font-size: 1.286rem;
+    font-style: italic;
+    margin: 3px 0 0;
+    color: white;
+}
+
+.portfolio_gallery_spanBottom-gitHub,
+.portfolio_gallery_spanBottom-currentSite {
+    font-family: 'Myriad Pro', serif;
+    color: #77756b;
+    font-size: 1.286rem;
+    font-style: italic;
+    color: white;
+    text-decoration: none;
+    margin: 3px 0;
+}
+
+.portfolio_gallery_spanBottom-gitHub:hover,
+.portfolio_gallery_spanBottom-currentSite:hover {
+    font-weight: bold;
+}
+
+.fa-github,
+.fa-external-link-square-alt {
+    color: white;
+}
+
+
+
+.portfolio_gallery_spanBottom-gitHub {
+    font-family: 'Myriad Pro', serif;
+    color: #77756b;
+    font-size: 1.286rem;
+    font-style: italic;
+    margin: 3px 0 0;
+    color: white;
 }
 
 .portfolio_gallery img {
@@ -346,6 +457,8 @@ i {
     height: 100%;
     vertical-align: middle;
 }
+
+.po
 
 @media screen and (max-width: 768px) {
     html {
