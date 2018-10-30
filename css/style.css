@@ -25,22 +25,26 @@ p {
 }
 
 i {
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 .container {
     max-width: 1400px;
     width: 100%;
     margin: 0 auto;
+    -webkit-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.26);
+    -moz-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.26);
+    box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.26);
+    scroll-behavior: smooth;
+
 }
 
 .header {
-    background-image: url(../images/header-background.jpg);
     background-size: cover;
-    background-repeat: no-repeat;
     padding-top: 2%;
     padding-bottom: 5%;
-    background-position: center;
+    background: url(../images/header-background.jpg) no-repeat center;
+    background-size: cover;
 }
 
 .navigation_list {
@@ -52,7 +56,7 @@ i {
     font-weight: bold;
     text-transform: uppercase;
     justify-content: flex-end;
-    margin: 0 10%;
+    margin: 0;
 
 }
 
@@ -60,6 +64,8 @@ i {
     margin-right: 36px;
     text-decoration: none;
     color: white;
+    padding: 10px;
+    display: block;
 }
 
 .navigation_link:hover {
@@ -113,6 +119,7 @@ i {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    text-decoration: none;
 }
 
 .button:hover {
@@ -136,7 +143,7 @@ i {
 }
 
 .about {
-    margin-top: 65px;
+    margin-top: 50px;
 }
 
 .about-title {
@@ -168,7 +175,7 @@ i {
 }
 
 .about-content {
-    margin-top: 84px;
+    margin-top: 3%;
     display: grid;
     grid-row-gap: 100px;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
@@ -178,6 +185,7 @@ i {
 .last-place_text {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
+    margin-right: 5%;
 
 }
 
@@ -188,11 +196,12 @@ i {
     font-weight: 400;
     letter-spacing: -0.032rem;
     text-align: right;
-    margin: 0;
 }
 
 .last-place_text ul {
     padding: 0;
+    margin-top: 3%;
+    list-style: none;
 }
 
 .last-place_text li {
@@ -201,7 +210,6 @@ i {
     font-weight: 400;
     letter-spacing: -0.025rem;
     text-align: right;
-    margin-right: 10px;
 }
 
 .last-place_text li:nth-child(n+2) {
@@ -218,6 +226,7 @@ i {
 .skills_text {
     grid-column: 3 / 4;
     grid-row: 2 / 3;
+    margin-left: 5%;
 }
 
 .skills_text h3 {
@@ -235,13 +244,14 @@ i {
     color: #777777;
     font-weight: 400;
     letter-spacing: -0.025rem;
-    margin-left: 10px;
     text-align: left;
 }
 
 .skills_text ul {
     padding: 0;
-    list-style-position: inside;
+    margin: 0;
+    list-style-type: none;
+    margin-top: 3%;
 }
 
 .skills_img {
@@ -254,6 +264,8 @@ i {
 .technologies-list_text {
     grid-column: 1 / 2;
     grid-row: 3 / 4;
+    margin-right: 5%;
+    text-align: right;
 }
 
 .technologies-list_text h3 {
@@ -263,7 +275,6 @@ i {
     font-weight: 400;
     letter-spacing: -0.032rem;
     margin: 0;
-    text-align: right;
 }
 
 .technologies-list_text li {
@@ -271,8 +282,7 @@ i {
     color: #777777;
     font-weight: 400;
     letter-spacing: -0.025rem;
-    margin-right: 10px;
-    text-align: right;
+    list-style: none;
 }
 
 .technologies-list_img {
@@ -283,16 +293,26 @@ i {
 }
 
 .about_cv {
-    margin-top: 100px;
+    margin-top: 40px;
 }
 
 .portfolio {
-    margin-top: 100px;
+    margin-top: 65px;
+    padding: 30px;
+    background-image: url(../images/portfolio-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.portfolio-title {
+    padding-top: 10px;
 }
 
 .portfolio_flex {
     display: flex;
     justify-content: center;
+    margin-top: 3%;
+    max-height: 80vh;
 }
 
 .portfolio_header {
@@ -315,10 +335,11 @@ i {
 }
 
 .portfolio_gallery {
-    width: 80%;
+    width: 90%;
     position: relative;
     overflow: hidden;
-    perspective: 1000px
+    perspective: 1000px;
+    /*max-height: 80vh;*/
 }
 
 .portfolio_gallery_spanTop {
@@ -339,6 +360,7 @@ i {
     -ms-transition: all .5s;
     -o-transition: all .5s;
     transition: all .5s;
+    padding: 10px;
 }
 
 .portfolio_gallery_spanBottom {
@@ -346,7 +368,7 @@ i {
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.71);
     border: 1px solid black;
-    width: 99.9%;
+    width: 100%;
     -webkit-transform: rotateX(-90deg);
     -moz-transform: rotateX(-90deg);
     -ms-transform: rotateX(-90deg);
@@ -359,10 +381,10 @@ i {
     -ms-transition: all .5s;
     -o-transition: all .5s;
     transition: all .5s;
-    height: 5%;
-    padding: 5px;
+    padding: 10px;
+    box-sizing: border-box;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .spanBottom-item {
@@ -390,7 +412,6 @@ i {
 
 .portfolio_gallery_spanTop-text {
     font-family: 'Myriad Pro', serif;
-    color: #77756b;
     font-size: 1.286rem;
     font-style: italic;
     margin: 3px 0 0;
@@ -400,7 +421,6 @@ i {
 .portfolio_gallery_spanBottom-gitHub,
 .portfolio_gallery_spanBottom-currentSite {
     font-family: 'Myriad Pro', serif;
-    color: #77756b;
     font-size: 1.286rem;
     font-style: italic;
     color: white;
@@ -416,18 +436,13 @@ i {
 .fa-github,
 .fa-external-link-square-alt {
     color: white;
+    margin-right: 5px;
 }
 
-
-
-.portfolio_gallery_spanBottom-gitHub {
-    font-family: 'Myriad Pro', serif;
-    color: #77756b;
-    font-size: 1.286rem;
-    font-style: italic;
-    margin: 3px 0 0;
-    color: white;
+.portfolio_gallery_spanBottom-gitHub:hover .fa-github {
+    font-weight: normal;
 }
+
 
 .portfolio_gallery img {
     width: 100%;
@@ -443,7 +458,7 @@ i {
 }
 
 .portfolio_ArrowBox:hover .fas {
-    font-size: 2.25rem;
+    font-size: 3rem;
 }
 
 .portfolio_ArrowBox:active .fas {
@@ -458,11 +473,119 @@ i {
     vertical-align: middle;
 }
 
-.po
+.feedback {
+    background-image: url(../images/contact-us-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 50px;
+    padding-bottom: 57px;
+}
+
+.feedback-header {
+    text-align: center;
+}
+
+.feedback-title {
+    font-family: 'Myriad Pro', serif;
+    text-transform: uppercase;
+    font-size: 2.858rem;
+    font-weight: 400;
+    letter-spacing: -0.071rem;
+    margin: 0;
+    color: white;
+}
+
+.feedback-text {
+    font-family: 'Myriad Pro', serif;
+    color: #777777;
+    font-size: 1.286rem;
+    font-style: italic;
+    text-align: center;
+    margin: 8px 0 0;
+}
+
+.feedback-flex {
+    display: flex;
+    justify-content: center;
+    margin-top: 7%;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.feedback-form {
+    width: 40%;
+    margin-left: 5%;
+}
+
+.feedback-social-flex {
+    display: flex;
+    justify-content: space-around;
+    padding-left: 25%;
+    padding-right: 25%;
+    margin-top: 8%;
+    margin-bottom: 2%;
+}
+
+.feedback-me {
+    text-align: center;
+}
+
+.feedback-link {
+    color: white;
+}
+
+.feedback-link:hover {
+    font-weight: bold;
+}
+
+.feedback-mail {
+    font-family: 'Myriad Pro', serif;
+    font-weight: 400;
+    color: white;
+    font-size: 2rem;
+    text-decoration: none;
+    width: 100%;
+}
+
+.feedback-mail:hover {
+    text-decoration: underline;
+}
+
+.feedback-link:active {
+    color: #877f88;
+}
+
+.feedback-form-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.feedback__input {
+    border: 1px solid #CACACA;
+    width: 92%;
+    height: 48px;
+    color: #8C8C8C;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.btn_submit_form {
+
+}
 
 @media screen and (max-width: 768px) {
     html {
         font-size: 10px;
+    }
+
+    .navigation_link {
+        padding: 0px;
     }
 
 }
@@ -470,6 +593,10 @@ i {
 @media screen and (max-width: 768px) and (min-width: 461px) {
     html {
         font-size: 10px;
+    }
+
+    i {
+        font-size: 2rem;
     }
 
     .navigation_list {
@@ -486,12 +613,27 @@ i {
         font-size: 10px;
         margin-top: 50px;
     }
+
+    .feedback-photo {
+        width: 158px;
+        height: 158px;
+    }
+
 }
 
 @media screen and (max-width: 460px) {
     html {
-        font-size: 12px;
+        font-size: 10px;
     }
+
+    i {
+        font-size: 2rem;
+    }
+
+    .portfolio_ArrowBox:hover .fas {
+        font-size: 2rem;
+    }
+
 
     .acquaintance {
         text-align: center;
@@ -591,5 +733,34 @@ i {
     .about_cv {
         font-size: 8px;
         margin-top: 30px;
+    }
+
+    .portfolio_gallery_display-none {
+        display: none;
+    }
+
+    .portfolio_gallery_spanBottom {
+        justify-content: space-around;
+    }
+
+    .spanBottom-item {
+        width: auto;
+    }
+
+    .feedback-photo {
+        width: 158px;
+        height: 158px;
+    }
+
+    .feedback-flex {
+     flex-direction: column;
+        align-items: center;
+    }
+
+    .feedback-form {
+        margin:0;
+        margin-top: 10%;
+        width: 80%;
+
     }
 }

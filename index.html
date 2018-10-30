@@ -9,27 +9,30 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
           integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <title>Борщев Петр</title>
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js" defer></script>
+    <script type="text/javascript" src="js/script-jq.js" defer></script>
 </head>
 <body>
 <div class="container">
     <header class="header">
-        <nav class="navigation">
+        <nav class="navigation" id="menu">
             <ul class="navigation_list">
-                <li class="navigation_item"><a class="navigation_link" href="#" title="домой">домой</a></li>
-                <li class="navigation_item"><a class="navigation_link" href="#" title="обо мне">обо мне</a></li>
-                <li class="navigation_item"><a class="navigation_link" href="#" title="портфолио">портфолио</a></li>
-                <li class="navigation_item"><a class="navigation_link" href="#" title="контакты">контакты</a></li>
+                <li class="navigation_item"><a class="navigation_link" href="#about" title="обо мне">обо мне</a></li>
+                <li class="navigation_item"><a class="navigation_link" href="#portfolio" title="портфолио">портфолио</a>
+                </li>
+                <li class="navigation_item"><a class="navigation_link" href="#feedback" title="контакты">контакты</a>
+                </li>
             </ul>
         </nav>
         <div class="acquaintance">
             <h2 class="acquaintance_greeting">Здравствуйте!</h2>
             <h1 class="acquaintance_surname">Я Петр Борщев</h1>
-            <a class="button acquaintance_hire-button">нанять меня</a>
+            <a class="button acquaintance_hire-button" href="#feedback">нанять меня</a>
         </div>
     </header>
     <main class="main">
 
-        <div class="about">
+        <div class="about" id="about">
             <div class="about-title">
                 <h2 class="about_header">обо мне</h2>
                 <p class="about_header-text">Чтобы уметь воспользоваться опытом, нужен опыт.</p>
@@ -43,9 +46,6 @@
                             <li>ООО "ОКЕЙ-ТЕЛЕКОМ" <br> инженер-техник</li>
                             <li>ООО "ОКЕЙ-ТЕЛЕКОМ" <br> инженер технической поддержки</li>
                         </ul>
-                        <!--<p>май 2016 - август 2017. МБУ МФЦ ММР ( старший эксперт )</p>-->
-                        <!--<p>август 2016 - настоящее время. ООО "ОКЕЙ-ТЕЛЕКОМ" ( инженер-техник )</p>-->
-                        <!--<p>август 2017 - настоящее время. ООО "ОКЕЙ-ТЕЛЕКОМ" ( инженер технической поддержки )</p>-->
                     </div>
                     <img class="last-place_img" src="images/circle1.png">
 
@@ -65,18 +65,16 @@
                             <li>HTML5</li>
                             <li>CSS3</li>
                             <li>LESS</li>
-                            <li>ES5</li>
+                            <li>ES6</li>
                         </ul>
                     </div>
                     <img class="technologies-list_img" src="images/circle3.png">
                 </div>
                 <a class="button about_cv">Скачать полное резюме</a>
             </div>
-
-
         </div>
 
-        <div class="portfolio">
+        <div class="portfolio" id="portfolio">
             <div class="portfolio-title">
                 <h2 class="portfolio_header">Портфолио</h2>
                 <p class="portfolio_header-text">Самая тяжелая работа - её отсутствие.</p>
@@ -87,25 +85,26 @@
                 </div>
                 <div class="portfolio_gallery">
                     <div class="portfolio_gallery_spanTop">
-                        <h2 class="portfolio_gallery_spanTop-header" id="portfolioHeader">Интернет-магазин детских
+                        <h2 id="portfolioHeader" class="portfolio_gallery_spanTop-header">Интернет-магазин детских
                             колясок "Brand"</h2>
                         <p class="portfolio_gallery_spanTop-text" id="portfolioText">Учебный проект. В стадии
                             разработки.</p>
                     </div>
                     <div class="portfolio_gallery_spanBottom">
                         <div class="spanBottom-item">
-                            <i class="fab fa-github"></i>
                             <a class="portfolio_gallery_spanBottom-gitHub" id="gitHubR"
-                               href="https://github.com/p1tDrujba/pram-shop-2" target="_blank">Перейти на
-                                git-репозиторий проекта</a>
+                               href="https://github.com/p1tDrujba/pram-shop-2" target="_blank"><i
+                                    class="fab fa-github"></i><span class="portfolio_gallery_display-none">Перейти на
+                                git-репозиторий проекта</span></a>
                         </div>
                         <div class="spanBottom-item">
-                            <i class="fas fa-external-link-square-alt"></i>
                             <a class="portfolio_gallery_spanBottom-currentSite" id="currentSite"
-                               href="sites/pram-shop-2/index.html" target="_blank">Перейти на сайт</a>
+                               href="sites/pram-shop-2/index.html" target="_blank"><i
+                                    class="fas fa-external-link-square-alt"></i><span
+                                    class="portfolio_gallery_display-none">Перейти на сайт</span></a>
                         </div>
                     </div>
-                    <img id="portfolio-image" src="images/site1.jpg" alt="сайт из портфолио">
+                    <img id="portfolio-image" src="images/site1.jpg" alt="сайт из портфолио" class="suka">
                 </div>
                 <div class="portfolio_ArrowBox" id="portfolio-rightArrow">
                     <i class="fas fa-angle-right"></i>
@@ -113,9 +112,36 @@
             </div>
         </div>
 
+        <div class="feedback" id="feedback">
+            <div class="feedback-header">
+                <h2 class="feedback-title">Свяжитесь со мной</h2>
+                <p class="feedback-text">Сомневаешься — не делай, делаешь — не сомневайся.</p>
+            </div>
+            <div class="feedback-flex">
+                <div class="feedback-me">
+                    <img class="feedback-photo" src="images/face.png" alt="Лик создателя">
+                    <div class="feedback-social-flex">
+                        <a class="feedback-link" href="https://github.com/p1tDrujba" target="_blank"><i class="fab fa-github-square"></i></a>
+                        <a class="feedback-link" href="https://vk.com/id4672044" target="_blank"> <i class="fab fa-vk"></i></a>
+                    </div>
+                    <a class="feedback-mail" href="mailto:p.borshchev@gmail.com">p.borshchev@gmail.com</a>
+                </div>
+                <div class="feedback-form">
+                    <form class="feedback-form-flex" action="index1.php" method="post" id="order_call_form">
+                        <input class="feedback__input" type="text" name="name" placeholder="Ваше имя"/>
+                        <input class="feedback__input" type="text" name="firm" placeholder="Ваша организация"/>
+                        <input class="feedback__input" type="text" name="phone" placeholder="Ваш телефон"/>
+                        <input class="feedback__input" type="text" name="email" placeholder="Ваш e-mail"/>
+                        <input type="submit" class="button" value="Отправить"/>
+                    </form>
+                </div>
+            </div>
+        </div>
+
     </main>
 </div>
 
-<script src="js/script.js"></script>
+<script type="text/javascript" src="js/script.js" defer></script>
+
 </body>
 </html>

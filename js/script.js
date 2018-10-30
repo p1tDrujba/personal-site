@@ -1,9 +1,9 @@
 "use strict"
 
-var leftArrow = document.getElementById('portfolio-leftArrow');
-var rightArrow = document.getElementById('portfolio-rightArrow');
-var initImageNumber = 1;
-var maxImageNumber = 4;
+let leftArrow = document.getElementById('portfolio-leftArrow');
+let rightArrow = document.getElementById('portfolio-rightArrow');
+let initImageNumber = 1;
+let maxImageNumber = 4;
 
 
 
@@ -17,11 +17,11 @@ rightArrow.onclick = moveForward;
 
 
 function moveBackward() {
-  var portfolioHeader = document.getElementById('portfolioHeader');
-  var portfolioText = document.getElementById('portfolioText');
-  var image = document.getElementById('portfolio-image');
-  var gitHub = document.getElementById('gitHubR');
-  var currentSite = document.getElementById('currentSite');
+  let portfolioHeader = document.getElementById('portfolioHeader');
+  let portfolioText = document.getElementById('portfolioText');
+  let image = document.getElementById('portfolio-image');
+  let gitHub = document.getElementById('gitHubR');
+  let currentSite = document.getElementById('currentSite');
   initImageNumber--;
   if (initImageNumber === 0){initImageNumber = maxImageNumber}
   image.setAttribute('src', 'images/site' + initImageNumber + '.jpg');
@@ -52,11 +52,11 @@ function moveBackward() {
 }
 
 function moveForward() {
-  var image = document.getElementById('portfolio-image');
-  var portfolioHeader = document.getElementById('portfolioHeader');
-  var portfolioText = document.getElementById('portfolioText');
-  var gitHub = document.getElementById('gitHubR');
-  var currentSite = document.getElementById('currentSite');
+  let image = document.getElementById('portfolio-image');
+  let portfolioHeader = document.getElementById('portfolioHeader');
+  let portfolioText = document.getElementById('portfolioText');
+  let gitHub = document.getElementById('gitHubR');
+  let currentSite = document.getElementById('currentSite');
   initImageNumber++;
   if (initImageNumber > maxImageNumber){initImageNumber = 1}
   image.setAttribute('src', 'images/site' + initImageNumber + '.jpg');
