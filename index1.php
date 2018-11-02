@@ -30,7 +30,7 @@ header('Refresh: 3; URL=index.html');
 body
 {
 
-   background: #22BFF7 url(img/zakaz.jpg) top -70% center no-repeat;
+   background: #222222 url(images/thanksPHP.png) top -70% center no-repeat;
 
 }
 

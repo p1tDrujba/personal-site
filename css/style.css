@@ -32,9 +32,9 @@ i {
     max-width: 1400px;
     width: 100%;
     margin: 0 auto;
-    -webkit-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.26);
-    -moz-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.26);
-    box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.26);
+    -webkit-box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.26);
+    -moz-box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.26);
+    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.26);
     scroll-behavior: smooth;
 
 }
@@ -60,7 +60,7 @@ i {
 
 }
 
-.navigation_link {
+.navigation__link {
     margin-right: 36px;
     text-decoration: none;
     color: white;
@@ -68,11 +68,11 @@ i {
     display: block;
 }
 
-.navigation_link:hover {
+.navigation__link:hover {
     color: #fed136;
 }
 
-.navigation_link:active {
+.navigation__link:active {
     opacity: 0.5;
 }
 
@@ -85,7 +85,7 @@ i {
     margin-right: 10%;
 }
 
-.acquaintance_greeting {
+.acquaintance__greeting {
     font-family: 'Montserrat', sans-serif;
     color: white;
     font-style: italic;
@@ -93,7 +93,7 @@ i {
     margin: 0;
 }
 
-.acquaintance_surname {
+.acquaintance__surname {
     font-family: 'Montserrat', sans-serif;
     color: white;
     letter-spacing: -1px;
@@ -150,7 +150,7 @@ i {
     text-align: center;
 }
 
-.about_header {
+.about-title__header {
     font-family: 'Myriad Pro', serif;
     text-transform: uppercase;
     font-size: 2.858rem;
@@ -159,7 +159,7 @@ i {
     margin: 0;
 }
 
-.about_header-text {
+.about-title__header-text {
     font-family: 'Myriad Pro', serif;
     color: #777777;
     font-size: 1.286rem;
@@ -174,7 +174,7 @@ i {
     align-items: center;
 }
 
-.about-content {
+.about-center__content {
     margin-top: 3%;
     display: grid;
     grid-row-gap: 100px;
@@ -182,14 +182,21 @@ i {
 
 }
 
-.last-place_text {
+.last-place__text {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
     margin-right: 5%;
-
 }
 
-.last-place_text h3 {
+.last-place__text:before {
+    content: "";
+    display: inline-block;
+    min-height: inherit;
+    height: 20%;
+    vertical-align: middle;
+}
+
+.last-place__text h3 {
     font-family: 'Myriad Pro', serif;
     color: #222222;
     font-size: 1.286rem;
@@ -198,13 +205,13 @@ i {
     text-align: right;
 }
 
-.last-place_text ul {
+.last-place__text ul {
     padding: 0;
     margin-top: 3%;
     list-style: none;
 }
 
-.last-place_text li {
+.last-place__text li {
     font-family: 'Myriad Pro', serif;
     color: #777777;
     font-weight: 400;
@@ -212,11 +219,13 @@ i {
     text-align: right;
 }
 
-.last-place_text li:nth-child(n+2) {
-    margin-top: 8px;
+.last-place__text li:nth-child(n+2) {
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
-.last-place_img {
+
+.last-place__img {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
     width: 100%;
@@ -227,6 +236,14 @@ i {
     grid-column: 3 / 4;
     grid-row: 2 / 3;
     margin-left: 5%;
+}
+
+.skills_text:before {
+    content: "";
+    display: inline-block;
+    min-height: inherit;
+    height: 20%;
+    vertical-align: middle;
 }
 
 .skills_text h3 {
@@ -247,12 +264,18 @@ i {
     text-align: left;
 }
 
+.skills_text li:nth-child(n+2) {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
 .skills_text ul {
     padding: 0;
     margin: 0;
     list-style-type: none;
     margin-top: 3%;
 }
+
 
 .skills_img {
     grid-column: 2 / 3;
@@ -268,6 +291,14 @@ i {
     text-align: right;
 }
 
+.technologies-list_text:before {
+    content: "";
+    display: inline-block;
+    min-height: inherit;
+    height: 20%;
+    vertical-align: middle;
+}
+
 .technologies-list_text h3 {
     font-family: 'Myriad Pro', serif;
     color: #222222;
@@ -277,12 +308,21 @@ i {
     margin: 0;
 }
 
+.technologies-list_text ul {
+    margin-top: 3%;
+}
+
 .technologies-list_text li {
     font-family: 'Myriad Pro', serif;
     color: #777777;
     font-weight: 400;
     letter-spacing: -0.025rem;
     list-style: none;
+}
+
+.technologies-list_text li:nth-child(n+2) {
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .technologies-list_img {
@@ -347,7 +387,6 @@ i {
     top: 0;
     background-color: rgba(0, 0, 0, 0.71);
     border: 1px solid black;
-    width: 99.9%;
     -webkit-transform: rotateX(90deg);
     -moz-transform: rotateX(90deg);
     -ms-transform: rotateX(90deg);
@@ -360,7 +399,10 @@ i {
     -ms-transition: all .5s;
     -o-transition: all .5s;
     transition: all .5s;
+    width: 100%;
     padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
 }
 
 .portfolio_gallery_spanBottom {
@@ -389,6 +431,7 @@ i {
 
 .spanBottom-item {
     width: 50%;
+    text-align: center;
 }
 
 .portfolio_gallery:hover .portfolio_gallery_spanTop,
@@ -442,7 +485,6 @@ i {
 .portfolio_gallery_spanBottom-gitHub:hover .fa-github {
     font-weight: normal;
 }
-
 
 .portfolio_gallery img {
     width: 100%;
@@ -584,7 +626,7 @@ i {
         font-size: 10px;
     }
 
-    .navigation_link {
+    .navigation__link {
         padding: 0px;
     }
 
@@ -634,18 +676,17 @@ i {
         font-size: 2rem;
     }
 
-
     .acquaintance {
         text-align: center;
     }
 
-    .about-content {
+    .about-center__content {
         grid-row-gap: 25px;
         grid-template-columns: 1fr;
         margin-top: 40px;
     }
 
-    .last-place_img {
+    .last-place__img {
         grid-column: 1 / 2;
         grid-row: 1 / 2;
         width: 158px;
@@ -654,16 +695,16 @@ i {
         margin: 0 auto;
     }
 
-    .last-place_text {
+    .last-place__text {
         grid-column: 1 / 2;
         grid-row: 2 / 3;
     }
 
-    .last-place_text h3 {
+    .last-place__text h3 {
         text-align: center;
     }
 
-    .last-place_text li {
+    .last-place__text li {
         list-style: none;
         text-align: center;
         margin: 0;
@@ -689,6 +730,7 @@ i {
 
     .skills_text li {
         margin: 0;
+        text-align: center;
     }
 
     .technologies-list_img {
@@ -711,7 +753,7 @@ i {
 
     .technologies-list_text li {
         margin: 0;
-        text-align: left;
+        text-align: center;
     }
 
     .navigation_list {
@@ -719,7 +761,7 @@ i {
         justify-content: center;
     }
 
-    .navigation_link {
+    .navigation__link {
         margin-right: 15px;
         font-size: 10px;
     }
@@ -753,12 +795,12 @@ i {
     }
 
     .feedback-flex {
-     flex-direction: column;
+        flex-direction: column;
         align-items: center;
     }
 
     .feedback-form {
-        margin:0;
+        margin: 0;
         margin-top: 10%;
         width: 80%;
 
